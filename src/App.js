@@ -11,12 +11,14 @@ function App() {
       <Container fluid>
         <Row>
           <Col>
+            <h5>Player 1</h5>
             <SelectFactions />
           </Col>
           <Col xs={6}>
             <SelectMissions />
           </Col>
           <Col>
+          <h5>Player 2</h5>
             <SelectFactions />
           </Col>
         </Row>
