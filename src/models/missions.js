@@ -1,7 +1,7 @@
 const missions = [
   {
     id: 1,
-    book: "GT2021",
+    book: "Grand Tournament 2021",
     label: "Crossfire",
     type: "Incursion",
     roll: 11,
@@ -12,7 +12,7 @@ const missions = [
   },
   {
     id: 2,
-    book: "GT2021",
+    book: "Grand Tournament 2021",
     label: "Resupply",
     type: "Incursion",
     roll: 12,
@@ -23,7 +23,7 @@ const missions = [
   },
   {
     id: 3,
-    book: "GT2021",
+    book: "Grand Tournament 2021",
     label: "Raid",
     type: "Incursion",
     roll: 13,
@@ -34,7 +34,7 @@ const missions = [
   },
   {
     id: 4,
-    book: "GT2021",
+    book: "Grand Tournament 2021",
     label: "Center Ground",
     type: "Incursion",
     roll: 21,
@@ -45,7 +45,7 @@ const missions = [
   },
   {
     id: 5,
-    book: "GT2021",
+    book: "Grand Tournament 2021",
     label: "Ascension",
     type: "Incursion",
     roll: 22,
@@ -56,7 +56,7 @@ const missions = [
   },
   {
     id: 6,
-    book: "GT2021",
+    book: "Grand Tournament 2021",
     label: "Forward Push",
     type: "Incursion",
     roll: 23,
@@ -67,7 +67,7 @@ const missions = [
   },
   {
     id: 7,
-    book: "GT2021",
+    book: "Grand Tournament 2021",
     label: "Rise of the Machine Spirit",
     type: "Incursion",
     roll: 31,
@@ -78,7 +78,7 @@ const missions = [
   },
   {
     id: 8,
-    book: "GT2021",
+    book: "Grand Tournament 2021",
     label: "Show of Force",
     type: "Incursion",
     roll: 32,
@@ -89,7 +89,7 @@ const missions = [
   },
   {
     id: 9,
-    book: "GT2021",
+    book: "Grand Tournament 2021",
     label: "Reconnaissance Mission",
     type: "Incursion",
     roll: 33,
@@ -100,7 +100,7 @@ const missions = [
   },
   {
     id: 1,
-    book: "GT2021",
+    book: "Grand Tournament 2021",
     label: "Retrieval Mission",
     type: "Strike Force",
     roll: 11,
@@ -111,7 +111,7 @@ const missions = [
   },
   {
     id: 1,
-    book: "GT2021",
+    book: "Grand Tournament 2021",
     label: "Scorched Earth",
     type: "Strike Force",
     roll: 12,
@@ -122,7 +122,7 @@ const missions = [
   },
   {
     id: 1,
-    book: "GT2021",
+    book: "Grand Tournament 2021",
     label: "Vital Intelligence",
     type: "Strike Force",
     roll: 13,
@@ -133,7 +133,7 @@ const missions = [
   },
   {
     id: 1,
-    book: "GT2021",
+    book: "Grand Tournament 2021",
     label: "Surround and Destroy",
     type: "Strike Force",
     roll: 21,
@@ -144,7 +144,7 @@ const missions = [
   },
   {
     id: 1,
-    book: "GT2021",
+    book: "Grand Tournament 2021",
     label: "Battle Lines",
     type: "Strike Force",
     roll: 22,
@@ -155,7 +155,7 @@ const missions = [
   },
   {
     id: 1,
-    book: "GT2021",
+    book: "Grand Tournament 2021",
     label: "The Scouring",
     type: "Strike Force",
     roll: 23,
@@ -166,7 +166,7 @@ const missions = [
   },
   {
     id: 1,
-    book: "GT2021",
+    book: "Grand Tournament 2021",
     label: "Overrun",
     type: "Strike Force",
     roll: 31,
@@ -177,7 +177,7 @@ const missions = [
   },
   {
     id: 1,
-    book: "GT2021",
+    book: "Grand Tournament 2021",
     label: "Sweep and Clear",
     type: "Strike Force",
     roll: 32,
@@ -188,7 +188,7 @@ const missions = [
   },
   {
     id: 1,
-    book: "GT2021",
+    book: "Grand Tournament 2021",
     label: "Priority Target",
     type: "Strike Force",
     roll: 33,

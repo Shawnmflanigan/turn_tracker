@@ -19,6 +19,15 @@ export default function SelectFactions() {
       <div>
         <img class="icon" src={selectedOption.icon} alt="" />
       </div>
+      <h2>Turn: </h2>
+      <h2>CP: </h2>
+      <h2>Primary Objective Points: </h2>
+      <h2>Secondary Objectives:</h2>
+      <ul>
+        <li>Secondary 1: </li>
+        <li>Secondary 2: </li>
+        <li>Secondary 3: </li>
+      </ul>
     </div>
   );
 }
