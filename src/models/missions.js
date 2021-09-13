@@ -379,7 +379,7 @@ const missions = [
   {
     id: 33,
     book: "Big Rule Book: Matched Play",
-    label: "All-OutWar",
+    label: "All-Out War",
     type: "Onslaught",
     roll: 2,
     primaryObjective: "Domination",

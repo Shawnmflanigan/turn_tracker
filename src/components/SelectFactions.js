@@ -7,6 +7,7 @@ export default function SelectFactions() {
   return (
     <div>
       <div>
+        <h5>Select Faction:</h5>
         <Select
           defaultValue="select"
           onChange={setSelectedOption}
