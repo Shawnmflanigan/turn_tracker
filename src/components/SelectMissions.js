@@ -10,10 +10,12 @@ export default function SelectMissions() {
   return (
     <div>
       <div>
+          <h5>Select Battle Size: </h5>
           <Select 
           defaultValue={selectedBattleSize}
           onChange={setSelectedBattleSize}
           options={battleSize}/>
+          <h5>Select Mission: </h5>
         <Select
           defaultValue={selectedMission}
           onChange={setSelectedMission}
@@ -28,7 +30,7 @@ export default function SelectMissions() {
           <p>Battle Size: {selectedBattleSize.label}</p>
         <p>Primary Objective: {selectedMission.primaryObjective}</p>
         <p>
-        <a href={selectedMission.url} target="blank">Wahapedia Link</a>
+        <a href={selectedMission.url} target="blank">Link to Mission</a>
         </p>
         <p>Special Secondary: {selectedMission.specialSecondary}</p>
       </div>
