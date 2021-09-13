@@ -8,7 +8,7 @@ export default function SelectFactions() {
     <div>
       <div>
         <Select
-          defaultValue={selectedOption}
+          defaultValue="select"
           onChange={setSelectedOption}
           options={factions}
         />

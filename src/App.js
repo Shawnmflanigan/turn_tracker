@@ -3,6 +3,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import SelectFactions from "./components/SelectFactions";
 import "bootstrap/dist/css/bootstrap.min.css";
+import SelectMissions from "./components/SelectMissions";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
             <SelectFactions />
           </Col>
           <Col xs={6}>
-            <h1>This is where stuff goes</h1>
+            <SelectMissions />
           </Col>
           <Col>
             <SelectFactions />
