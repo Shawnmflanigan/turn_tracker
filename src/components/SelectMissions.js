@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Select from "react-select";
 import missions from "../models/missions";
 import battleSize from "../models/battleSize";
@@ -7,12 +7,15 @@ export default function SelectMissions() {
   const [selectedMission, setSelectedMission] = useState([]);
   const [selectedBattleSize, setSelectedBattleSize] = useState([]);
 
-const filteredMissions = missions.filter(mission => mission.type === selectedBattleSize.label)
+  const filteredMissions = missions.filter(
+    (mission) => mission.type === selectedBattleSize.label
+  );
 
-console.log(filteredMissions)
 
+  function loadArmies () {
+  alert((document.getElementsByClassName("test")[0].innerText) + "\n" + "VS" + "\n" + (document.getElementsByClassName("test")[1].innerText)) 
+  }
 
-  
   return (
     <div>
       <div>
@@ -20,7 +23,7 @@ console.log(filteredMissions)
         <Select
           defaultValue={selectedBattleSize}
           onChange={setSelectedBattleSize}
-          options={battleSize} 
+          options={battleSize}
         />
         <h5>Select Mission: </h5>
         <Select
@@ -42,6 +45,7 @@ console.log(filteredMissions)
           </a>
         </p>
         <p>Special Secondary: {selectedMission.specialSecondary}</p>
+        <button onClick={loadArmies}>Load Armies</button>
       </div>
     </div>
   );

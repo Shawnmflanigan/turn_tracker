@@ -16,6 +16,7 @@ export default function SelectFactions() {
     (secondary) => secondary.type !== selectedSecondary.type 
   );
 
+
   return (
     <div>
       <div>
@@ -27,7 +28,7 @@ export default function SelectFactions() {
         />
       </div>
       <div>
-        <h1>{selectedFaction.label}</h1>
+        <h1 class="test">{selectedFaction.label}</h1>
       </div>
       <div>
         <img class="icon" src={selectedFaction.icon} alt="" />
