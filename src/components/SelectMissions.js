@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Select from "react-select";
 import missions from "../models/missions";
 import battleSize from "../models/battleSize";

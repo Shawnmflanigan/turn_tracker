@@ -3,8 +3,8 @@ import Select from "react-select";
 import factions from "../models/factions";
 import secondaryObjectives from "../models/secondaryObjectives";
 
-export default function SelectFactions() {
-  const [selectedFaction, setSelectedFaction] = useState([]);
+export default function SelectFactions({faction, onFactionChange}) {
+  // const [selectedFaction, setSelectedFaction] = useState([]);
 
   const [selectedSecondary, setSelectedSecondary] = useState([]);
 
@@ -22,16 +22,10 @@ export default function SelectFactions() {
       <div>
         <h5>Select Faction:</h5>
         <Select
-          defaultValue="select"
-          onChange={setSelectedFaction}
+          defaultValue='select'
+          onChange={onFactionChange}
           options={factions}
         />
-      </div>
-      <div>
-        <h1 class="test">{selectedFaction.label}</h1>
-      </div>
-      <div>
-        <img class="icon" src={selectedFaction.icon} alt="" />
       </div>
       <h2>Turn: </h2>
       <h2>CP: </h2>
