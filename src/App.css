@@ -54,9 +54,11 @@ footer {
   .col1,
   .col3 {
     width: 50%;
+    height: 33%;
   }
-  .col {
-    width: 100%;
+  .col2 {
+    width: 50%;
+    height: 33%;
   }
 }
 
@@ -66,3 +68,4 @@ footer {
     width: 100%;
   }
 }
+

@@ -1,20 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import Select from "react-select";
 import factions from "../models/factions";
 import secondaryObjectives from "../models/secondaryObjectives";
 
-export default function SelectFactions({faction, onFactionChange}) {
-  // const [selectedFaction, setSelectedFaction] = useState([]);
+export default function SelectFactions({faction, onFactionChange, onSecondaryChange, secondary2, onSecondary2Change, secondary3, onSecondary3Change}) {
 
-  const [selectedSecondary, setSelectedSecondary] = useState([]);
-
-  const [selectedSecondary2, setSelectedSecondary2] = useState([]);
-
-  const [selectedSecondary3, setSelectedSecondary3] = useState([]);
-
-  const filterSecondary2 = secondaryObjectives.filter(
-    (secondary) => secondary.type !== selectedSecondary.type 
-  );
+  // const filterSecondary2 = secondaryObjectives.filter(
+  //   (secondary) => secondary.type !== selectedSecondary.type 
+  // );
 
 
   return (
@@ -27,33 +20,30 @@ export default function SelectFactions({faction, onFactionChange}) {
           options={factions}
         />
       </div>
-      <h2>Turn: </h2>
-      <h2>CP: </h2>
-      <h2>Primary Objective Points: </h2>
       <h2>Secondary Objectives:</h2>
       <ul>
         <li>
           Secondary 1:
           <Select
-            defaultValue={selectedSecondary}
-            onChange={setSelectedSecondary}
+            defaultValue='select'
+            onChange={onSecondaryChange}
             options={secondaryObjectives}
           />
         </li>
         <li>
           Secondary 2:
           <Select
-            defaultValue={selectedSecondary2}
-            onChange={setSelectedSecondary2}
-            options={filterSecondary2}
+            defaultValue='select'
+            onChange={onSecondary2Change}
+            options={secondaryObjectives}
           />
         </li>
         <li>
           Secondary 3:
           <Select
-            defaultValue={selectedSecondary3}
-            onChange={setSelectedSecondary3}
-            options={filterSecondary2}
+            defaultValue='select'
+            onChange={onSecondary3Change}
+            options={secondaryObjectives}
           />{" "}
         </li>
       </ul>

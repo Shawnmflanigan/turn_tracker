@@ -11,11 +11,6 @@ export default function SelectMissions() {
     (mission) => mission.type === selectedBattleSize.label
   );
 
-
-  function loadArmies () {
-  alert((document.getElementsByClassName("test")[0].innerText) + "\n" + "VS" + "\n" + (document.getElementsByClassName("test")[1].innerText)) 
-  }
-
   return (
     <div>
       <div>
@@ -45,7 +40,7 @@ export default function SelectMissions() {
           </a>
         </p>
         <p>Special Secondary: {selectedMission.specialSecondary}</p>
-        <button onClick={loadArmies}>Load Armies</button>
+
       </div>
     </div>
   );
