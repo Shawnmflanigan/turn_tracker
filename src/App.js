@@ -12,7 +12,10 @@ function App() {
   const [p1Secondary1, setP1Secondary1] = useState([]);
   const [p1Secondary2, setP1Secondary2] = useState([]);
   const [p1Secondary3, setP1Secondary3] = useState([]);
-  
+
+  const [p2Secondary1, setP2Secondary1] = useState([]);
+  const [p2Secondary2, setP2Secondary2] = useState([]);
+  const [p2Secondary3, setP2Secondary3] = useState([]);
 
   function loadArmies() {
     var elem = document.getElementById("display");
@@ -39,7 +42,16 @@ function App() {
       </div>
       <div class="col col2">
         <h1>Player 2:</h1>
-        <SelectFactions faction={faction2} onFactionChange={setFaction2} />
+        <SelectFactions
+          faction={faction2}
+          onFactionChange={setFaction2}
+          secondary={p2Secondary1}
+          secondary2={p2Secondary2}
+          secondary3={p2Secondary3}
+          onSecondaryChange={setP2Secondary1}
+          onSecondary2Change={setP2Secondary2}
+          onSecondary3Change={setP2Secondary3}
+        />
         <hr></hr>
       </div>
       <div class="col col3">
@@ -54,6 +66,10 @@ function App() {
         p1Secondary1={p1Secondary1}
         p1Secondary2={p1Secondary2}
         p1Secondary3={p1Secondary3}
+        p2Secondary1={p2Secondary1}
+        p2Secondary2={p2Secondary2}
+        p2Secondary3={p2Secondary3}
+
       />
     </main>
   );
