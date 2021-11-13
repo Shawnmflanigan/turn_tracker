@@ -40,12 +40,25 @@ export default function Display({
   const incrementButton = () =>
     setSecondary1Points((secondary1Points) => secondary1Points + 1);
 
-  const decrementButonn = () =>
+  const decrementButton = () =>
     setSecondary1Points((secondary1Points) => secondary1Points - 1);
 
+  const [secondary2Points, setSecondary2Points] = useState(0);
+  const incrementButton2 = () =>
+    setSecondary2Points((secondary2Points) => secondary2Points + 1);
+
+  const decrementButton2 = () =>
+    setSecondary2Points((secondary2Points) => secondary2Points - 1);
+
+    const [secondary3Points, setSecondary3Points] = useState(0);
+    const incrementButton3 = () =>
+      setSecondary3Points((secondary3Points) => secondary3Points + 1);
   
-  const addPoints = primary1 + secondary1Points;
-  console.log(addPoints)
+    const decrementButton3 = () =>
+      setSecondary3Points((secondary3Points) => secondary3Points - 1);
+
+  const addPoints = primary1 + secondary1Points + secondary2Points + secondary3Points;
+  console.log(addPoints);
 
   return (
     <div>
@@ -57,15 +70,23 @@ export default function Display({
         <button onClick={upFive}>+</button>
         <button onClick={downFive}>-</button>
 
-        <p>Secondary: {secondary1Points}</p>
+        <p>Secondary:</p>
         <ul>
           <li>
-            {p1Secondary1.label}
+            {p1Secondary1.label}: {secondary1Points}
             <button onClick={incrementButton}>+</button>
-            <button onClick={decrementButonn}>-</button>
+            <button onClick={decrementButton}>-</button>
           </li>
-          <li>{p1Secondary2.label}</li>
-          <li>{p1Secondary3.label}</li>
+          <li>
+            {p1Secondary2.label}: {secondary2Points}
+            <button onClick={incrementButton2}>+</button>
+            <button onClick={decrementButton2}>-</button>
+          </li>
+          <li>
+            {p1Secondary3.label}: {secondary3Points}
+            <button onClick={incrementButton3}>+</button>
+            <button onClick={decrementButton3}>-</button>
+          </li>
         </ul>
       </div>
 
