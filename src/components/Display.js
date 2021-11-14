@@ -1,3 +1,4 @@
+import { set } from "mongoose";
 import { useState } from "react";
 import Turn from "./Turn";
 
@@ -16,6 +17,17 @@ export default function Display({
   console.log(
     `Player one Secondaries are ${p1Secondary1.label}, ${p1Secondary2.label}, & ${p1Secondary3.label}`
   );
+
+// Command Points
+  const [cp1, setCp1] = useState();
+  const [cp2, setCp2] = useState(0);
+
+  const incrementCP1Button = () =>
+    setCp1((cp1) => ++cp1);
+
+const decrementCP1Button = () => 
+setCp1((cp1) => --cp1)
+
 
   // Primary Objective Tracker
   const [primary1, setPrimary1] = useState(0);
@@ -53,15 +65,15 @@ export default function Display({
   const decrementButton2 = () =>
     setSecondary2Points((secondary2Points) => secondary2Points - 1);
 
-    const [secondary3Points, setSecondary3Points] = useState(0);
-    const incrementButton3 = () =>
-      setSecondary3Points((secondary3Points) => secondary3Points + 1);
-  
-    const decrementButton3 = () =>
-      setSecondary3Points((secondary3Points) => secondary3Points - 1);
+  const [secondary3Points, setSecondary3Points] = useState(0);
+  const incrementButton3 = () =>
+    setSecondary3Points((secondary3Points) => secondary3Points + 1);
 
-// Secondary Player 2
-const [P2secondary1Points, setP2Secondary1Points] = useState(0);
+  const decrementButton3 = () =>
+    setSecondary3Points((secondary3Points) => secondary3Points - 1);
+
+  // Secondary Player 2
+  const [P2secondary1Points, setP2Secondary1Points] = useState(0);
   const P2incrementButton = () =>
     setP2Secondary1Points((P2secondary1Points) => P2secondary1Points + 1);
 
@@ -75,18 +87,19 @@ const [P2secondary1Points, setP2Secondary1Points] = useState(0);
   const P2decrementButton2 = () =>
     setP2Secondary2Points((P2secondary2Points) => P2secondary2Points - 1);
 
-    const [P2secondary3Points, setP2Secondary3Points] = useState(0);
-    const P2incrementButton3 = () =>
-      setP2Secondary3Points((P2secondary3Points) => P2secondary3Points + 1);
-  
-    const P2decrementButton3 = () =>
-      setP2Secondary3Points((P2secondary3Points) => P2secondary3Points - 1);
+  const [P2secondary3Points, setP2Secondary3Points] = useState(0);
+  const P2incrementButton3 = () =>
+    setP2Secondary3Points((P2secondary3Points) => P2secondary3Points + 1);
 
-  const addPoints = primary1 + secondary1Points + secondary2Points + secondary3Points;
-  const addPoints2 = primary2 + P2secondary1Points + P2secondary2Points + P2secondary3Points;
+  const P2decrementButton3 = () =>
+    setP2Secondary3Points((P2secondary3Points) => P2secondary3Points - 1);
+
+  const addPoints =
+    primary1 + secondary1Points + secondary2Points + secondary3Points;
+  const addPoints2 =
+    primary2 + P2secondary1Points + P2secondary2Points + P2secondary3Points;
   console.log(addPoints);
-  console.log(addPoints2)
-  
+  console.log(`cp is ${cp1}`)
 
   return (
     <div>
@@ -94,6 +107,11 @@ const [P2secondary1Points, setP2Secondary1Points] = useState(0);
         {`Player 1: ${faction.label}`}
         <br />
         <img src={faction.icon} alt="" />
+        <h1>Command Points: {cp1}
+            <input onChange={e => setCp1(e.target.value)} value={cp1} placeholder="Enter CP" type="number"></input>
+            <button onClick={incrementCP1Button}></button>
+            <button onClick={decrementCP1Button}></button>
+        </h1>
         <p>Primary: {primary1}</p>
         <button onClick={upFive}>+</button>
         <button onClick={downFive}>-</button>
