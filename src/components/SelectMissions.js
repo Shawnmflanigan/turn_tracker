@@ -14,7 +14,7 @@ export default function SelectMissions() {
   return (
     <div>
       <div>
-        <h5>Select Battle Size: </h5>
+        <h5>Select Battle Size: if you want </h5>
         <Select
           defaultValue={selectedBattleSize}
           onChange={setSelectedBattleSize}

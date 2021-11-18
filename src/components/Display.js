@@ -1,5 +1,6 @@
 import { set } from "mongoose";
 import { useState } from "react";
+import { players } from "../models/players";
 import Turn from "./Turn";
 
 export default function Display({
@@ -16,18 +17,37 @@ export default function Display({
   console.log(`Faction 2 is ${faction2.label}`);
   console.log(
     `Player one Secondaries are ${p1Secondary1.label}, ${p1Secondary2.label}, & ${p1Secondary3.label}`
-  );
+  );  
 
-// Command Points
-  const [cp1, setCp1] = useState();
+// experiment
+
+const players = [
+    {
+        id: 1,
+        player: 1,
+        cp: 3,
+    },
+    {
+        id: 2,
+        player: 2,
+        cp: 0
+    }
+]
+
+function getCP(item) {
+    console.log(`Player ${item.player} has ${item.cp} CP`)
+}
+
+players.map(getCP);
+
+// cp fun
+
+  const [cp1, setCp1] = useState(players.cp);
   const [cp2, setCp2] = useState(0);
 
-  const incrementCP1Button = () =>
-    setCp1((cp1) => ++cp1);
+  const incrementCP1Button = () => setCp1((cp1) => ++cp1);
 
-const decrementCP1Button = () => 
-setCp1((cp1) => --cp1)
-
+  const decrementCP1Button = () => setCp1((cp1) => --cp1);
 
   // Primary Objective Tracker
   const [primary1, setPrimary1] = useState(0);
@@ -99,7 +119,7 @@ setCp1((cp1) => --cp1)
   const addPoints2 =
     primary2 + P2secondary1Points + P2secondary2Points + P2secondary3Points;
   console.log(addPoints);
-  console.log(`cp is ${cp1}`)
+  console.log(`cp is ${cp1}`);
 
   return (
     <div>
@@ -107,10 +127,16 @@ setCp1((cp1) => --cp1)
         {`Player 1: ${faction.label}`}
         <br />
         <img src={faction.icon} alt="" />
-        <h1>Command Points: {cp1}
-            <input onChange={e => setCp1(e.target.value)} value={cp1} placeholder="Enter CP" type="number"></input>
-            <button onClick={incrementCP1Button}></button>
-            <button onClick={decrementCP1Button}></button>
+        <h1>
+          Command Points: {cp1}
+          <input
+            onChange={(e) => setCp1(e.target.value)}
+            value={cp1}
+            placeholder="Enter CP"
+            type="number"
+          ></input>
+          <button onClick={incrementCP1Button}>+</button>
+          <button onClick={decrementCP1Button}>-</button>
         </h1>
         <p>Primary: {primary1}</p>
         <button onClick={upFive}>+</button>
